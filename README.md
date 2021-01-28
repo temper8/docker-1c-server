@@ -1,5 +1,11 @@
 # docker-1c-server
 
+## Update
+
+Это форк [репозитория](https://github.com/alexanderfefelov/docker-1c-server) 
+
+Я немного обновил его для версии 1C v.8.3.19.838
+
 ## Что это?
 
 docker-1c-server -- это сервер 1С:Предприятия в контейнере Docker.
