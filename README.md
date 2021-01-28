@@ -1,6 +1,6 @@
 # docker-1c-server
 
-## Update
+## Update  (29.01.2021)
 
 Это форк [репозитория](https://github.com/alexanderfefelov/docker-1c-server) 
 
@@ -18,7 +18,7 @@ docker-1c-server -- это сервер 1С:Предприятия в конте
 
 Клонируйте репозиторий:
 
-    git clone https://github.com/alexanderfefelov/docker-1c-server.git
+    git clone https://github.com/temper8/docker-1c-server.git
 
 Скопируйте deb-файлы дистрибутива сервера 1С:Предприятия в каталог `docker-1c-server` и затем выполните команды (здесь и далее вам понадобятся права администратора):
 
@@ -54,7 +54,7 @@ docker-1c-server -- это сервер 1С:Предприятия в конте
 
 Удалите образ:
 
-    docker rmi alexanderfefelov/1c-server
+    docker rmi temper8/1c-server
 
 :fire: Удалите данные:
 
