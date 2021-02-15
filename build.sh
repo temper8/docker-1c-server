@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --tag tmr8/1c-server .
+docker build --tag tmp8/1c-server .
