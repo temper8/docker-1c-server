@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-
+     
 ENV GOSU_VERSION 1.7
 RUN apt-get -qq update \
   && apt-get -qq install --yes --no-install-recommends ca-certificates wget locales \
@@ -20,7 +20,7 @@ ENV LANG ru_RU.utf8
 
 ADD 8_3_17_1851/*.deb /tmp/
 
-ENV PLATFORM_VERSION 8.3
+ENV PLATFORM_VERSION 83
 ENV SERVER_VERSION 8.3.17-1851
 RUN dpkg --install /tmp/1c-enterprise$PLATFORM_VERSION-common_${SERVER_VERSION}_amd64.deb 2> /dev/null \
   && dpkg --install /tmp/1c-enterprise$PLATFORM_VERSION-server_${SERVER_VERSION}_amd64.deb 2> /dev/null \
@@ -28,8 +28,8 @@ RUN dpkg --install /tmp/1c-enterprise$PLATFORM_VERSION-common_${SERVER_VERSION}_
   && mkdir --parents /var/log/1C /home/usr1cv8/.1cv8/1C/1cv8/conf \
   && chown --recursive usr1cv8:grp1cv8 /var/log/1C /home/usr1cv8
 
-COPY container/docker-entrypoint.sh /
-COPY container/logcfg.xml /home/usr1cv8/.1cv8/1C/1cv8/conf
+COPY container.v8_3_17_1851/docker-entrypoint.sh /
+COPY container.v8_3_17_1851/logcfg.xml /home/usr1cv8/.1cv8/1C/1cv8/conf
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
